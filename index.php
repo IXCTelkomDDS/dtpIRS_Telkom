@@ -114,13 +114,12 @@
 
 		<!-- section start -->
 		<!-- ================ -->
-		<div class="section clearfix object-non-visible" data-animation-effect="fadeIn" style="background-color: white; height: 650px; margin-top: 50px;">
+		<div id="banner" class="section clearfix object-non-visible" data-animation-effect="fadeIn" style="background-color: white; margin-top: 50px;">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12">
-						<h1 id="banner" class="title text-center"></h1>
 
-						<br>
+					<br>
+					<br>
 
 					<!-- Search -->
 						<div class="col-sm-8">
