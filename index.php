@@ -114,56 +114,32 @@
 
 		<!-- section start -->
 		<!-- ================ -->
-		<div id="banner" class="section clearfix object-non-visible" data-animation-effect="fadeIn" style="background-color: white; height: 650px;">
+		<div class="section clearfix object-non-visible" data-animation-effect="fadeIn" style="background-color: white; height: 650px; margin-top: 50px;">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
+						<h1 id="banner" class="title text-center"></h1>
 
-						<br>
 						<br>
 
 					<!-- Search -->
-					<div class= "nav navbar-nav navbar-right">
-						<div class="wrap-input100 validate-input" style="height: 30px; font-size: 15px; background-color: white; border-color: white;"><span style="font-weight: bold;"> Search : </span> &nbsp;
-							<input type="radio" name="jenis_search" value="Research Result" class="detail2" required=""> Research Result &nbsp;
-							<input type="radio" name="jenis_search" value="Prototype" class="detail2" required=""> Prototype
-							<span class="focus-input100"></span>
-						</div>
-					</div>
-
-					<br>
-					<br>
-
-					<div class="col-sm-8">
-						<div class="media">
-							<div class="media-body text-left">
-								<img src="images/home.jpg" width="800" style="height: 450px;" alt="">
+						<div class="col-sm-8">
+							<div class="media">
+								<div class="media-body text-left">
+									<img src="images/home.jpg" width="800" style="height: 450px;" alt="">
+								</div>
 							</div>
 						</div>
-					</div>
 
 					<div class= "nav navbar-nav navbar-right col-md-3">
-						<div id="research2">
-	                    	<form method="post" action="user/research-result.php">
-	                        	<div class="form-group input-group">
-	                            	<input style="width: 210px; height: 30px;" type="text" name="keyword" class="form-control" placeholder="Search" value="<?php echo $_REQUEST['keyword'];?>">
-	                            	<span class="form-group input-group-btn">
-	                                	<button style="height: 30px; font-size: 12px;" class="btn-primary" type="submit">Search</button>
-	                            	</span>
-	                        	</div>
-	                    	</form>
-	                    </div>
-
-	                    <div id="prototype3">
-	                    	<form method="post" action="user/prototype.php">
-	                        	<div class="form-group input-group">
-	                            	<input style="width: 210px; height: 30px;" type="text" name="keyword2" class="form-control" placeholder="Search" value="<?php echo $_REQUEST['keyword2'];?>">
-	                            	<span class="form-group input-group-btn">
-	                                	<button style="height: 30px; font-size: 12px; padding-right: 30px;" class="btn-primary" type="submit">Search</button>
-	                            	</span>
-	                        	</div>
-	                    	</form>
-	                    </div>
+	                    <form method="post" action="user/search.php">
+	                       	<div class="form-group input-group">
+	                           	<input style="width: 210px; height: 30px;" type="text" name="keyword" class="form-control" placeholder="Search" value="<?php echo $_REQUEST['keyword'];?>">
+	                           	<span class="form-group input-group-btn">
+	                               	<button style="height: 30px; padding-right: 30px; font-size: 12px;" class="btn-primary" type="submit">Search</button>
+	                           	</span>
+	                       	</div>
+	                    </form>
 	                </div>
 
 						<div class="col-sm-4">
