@@ -122,7 +122,7 @@
 					<br>
 
 					<!-- Search -->
-						<div class="col-sm-8">
+						<div class="col-sm-7">
 							<div class="media">
 								<div class="media-body text-left">
 									<img src="images/home.jpg" width="800" style="height: 450px;" alt="">
@@ -141,18 +141,18 @@
 	                    </form>
 	                </div>
 
-						<div class="col-sm-4">
+						<div class="col-sm-5">
 							<div class="media">
 								<div class="media-body text-left">
 									<h4 class="media-heading" style="margin-top: 30px; margin-left: 50px;">---- News of IRS ----</h4>
-									<p><li>Master Plan : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure aperiam consequatur quo quis exercitationem reprehenderit dolor vel ducimus, voluptate eaque suscipit iste placeat. </li></p>
-									<p><li>Networking Planning : </li></p>
-									<p><li>Consultation : </li></p>
-									<p><li>Assessment Network : </li></p>
-									<p><li>Assessment Security : </li></p>
-									<p><li>Operational Problem Analysis : </li></p>
-									<p><li>Technical Support : </li></p>
-									<p><li>Testing/PoC : </li></p>
+									<p><li style="margin-left: 40px;">Master Plan : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure aperiam consequatur quo quis exercitationem reprehenderit dolor vel ducimus, voluptate eaque suscipit iste placeat. </li></p>
+									<p><li style="margin-left: 40px;">Networking Planning : </li></p>
+									<p><li style="margin-left: 40px;">Consultation : </li></p>
+									<p><li style="margin-left: 40px;">Assessment Network : </li></p>
+									<p><li style="margin-left: 40px;">Assessment Security : </li></p>
+									<p><li style="margin-left: 40px;">Operational Problem Analysis : </li></p>
+									<p><li style="margin-left: 40px;">Technical Support : </li></p>
+									<p><li style="margin-left: 40px;">Testing/PoC : </li></p>
 								</div>
 							</div>				
 						</div>
