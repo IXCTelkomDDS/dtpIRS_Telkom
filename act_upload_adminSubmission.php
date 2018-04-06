@@ -2,7 +2,7 @@
 
 <?php
 
-  include "koneksi_db.php";
+  include "../koneksi_db.php";
 
     if(isset($_POST['Submit'])) {
 
@@ -36,7 +36,7 @@
             <?php } else { ?>
               <script>
                 alert('Add Failed');
-                location.href='admin/upload.php';
+                location.href='admin/submission.php';
               </script>
             <?php } ?>
     
@@ -76,7 +76,7 @@
             <?php } else { ?>
               <script>
                 alert('Add Failed');
-                location.href='admin/upload.php';
+                location.href='admin/submission.php';
               </script>
             <?php } ?>
     
@@ -113,7 +113,7 @@
       <?php } else { ?>
           <script>
           alert('Add Failed');
-          location.href='admin/upload.php';
+          location.href='admin/submission.php';
         </script>       
 
       <?php } ?>
