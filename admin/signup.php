@@ -7,7 +7,7 @@
   include "../koneksi_db.php";
 
 	  //query update user_pic
-	if(isset($_POST['SignUp'])) {
+	if(isset($_POST['SignUp1'])) {
 
       $name         = $_POST['name'];
       $username     = $_POST['username'];
@@ -24,7 +24,7 @@
         if($query) { ?>
           <script>
             alert('Add Successful');
-            location.href='home_admin.php';
+            location.href='user-pic.php';
           </script>
 
         <?php } else { ?>
@@ -35,9 +35,65 @@
 
       <?php } ?>    
 
-  <?php } 
+  <?php } else if(isset($_POST['SignUp2'])) {
+
+      $name         = $_POST['name'];
+      $username     = $_POST['username'];
+      $password     = $_POST['password'];
+      $name_pic 	= $_POST['name_pic'];
+      $phone    	= $_POST['phone'];
+      $email	    = $_POST['email'];
+      $lab_pic	    = $_POST['lab_pic'];
+      $user_type    = $_POST['user_type'];
+   
+	    $sql = "INSERT INTO user_pic (id_pic, name, username, password, name_pic, phone, email, lab_pic, user_type) VALUES (null, '$name', '$username', '$password', '$name_pic', '$phone', '$email', '$lab_pic', '$user_type')";
+        $query = mysqli_query($connect, $sql);
+		
+        if($query) { ?>
+          <script>
+            alert('Add Successful');
+            location.href='manager-pic.php';
+          </script>
+
+        <?php } else { ?>
+          <script>
+            alert('Add Failed');
+            location.href='signup.php';
+          </script>
+
+      <?php } ?>
+
+  <?php }
 
 ?>
+
+
+		<script src="../js/jquery.js"></script>
+		<script>
+
+			<!-- js tombol Upload -->
+			
+			$(document).ready(function(){
+    		$("#upload").css("display","none"); //Menghilangkan tombol upload ketika pertama kali dijalankan
+        		$(".detail").click(function(){ //Memberikan even ketika class detail di klik (class detail ialah class radio button)
+        			if ($("input[name='user_type']:checked").val() == "User P.I.C" ) { //Jika radio button selain "Prototype" dipilih maka tampilkan file_info2
+            			$("#upload").slideDown("fast"); //Efek Slide Down (Menampilkan file_info2)
+        			} else {
+            			$("#upload").slideUp("fast");  //Efek Slide Up (Menghilangkan file_info2)
+        			}
+        			if ($("input[name='user_type']:checked").val() == "Manager P.I.C" ) { //Jika radio button selain "Prototype" dipilih maka tampilkan file_info2
+            			$("#upload2").slideDown("fast"); //Efek Slide Down (Menampilkan file_info2)
+        			} else {
+            			$("#upload2").slideUp("fast");  //Efek Slide Up (Menghilangkan file_info2)
+        			}
+     			});
+     		});
+
+			<!-- end js tombol Upload -->
+
+			
+		</script>
+
 
 <!doctype html>
 <html lang="en" class="fullscreen-bg">
@@ -84,10 +140,10 @@
 	<div id="wrapper">
 		<div class="vertical-align-wrap" style="margin-top: 20px; margin-bottom: 20px;">
 			<div class="vertical-align-middle">
-				<div class="auth-box" style="width: 500px; height: 900px;">
+				<div class="auth-box" style="width: 500px; height: 850px;">
 					<div class="left" style="width: 500px;">
 						<div class="content" style="padding-bottom: 30px;">
-								<p class="lead" style="font-weight: bold; font-size: 30px; margin-top: 30px;">Sign Up to your account</p>
+								<p class="lead" style="font-weight: bold; font-size: 30px; margin-top: 20px;">Sign Up to your account</p>
 
 								<br>
 
@@ -139,14 +195,13 @@
 
 								<div class="form-group">
 									<label class="control-label" style="margin-right: 370px;">Usertype</label>
-									<select name="user_type" required="" class="form-control">
-										<option value="">-- Choose the usertype --</option>
-										<option value="User P.I.C">User P.I.C</option>
-										<option value="Manager P.I.C">Manager P.I.C</option>
-									</select>
+										<input type="radio" name="user_type" value="User P.I.C" class="detail" required=""> User P.I.C &nbsp; &nbsp; &nbsp;
+										<input type="radio" name="user_type" value="Manager P.I.C" class="detail" required=""> Manager P.I.C
 								</div>
 
-								<button type="submit" name="SignUp" value="Sign Up" class="btn btn-primary btn-lg btn-block" style="font-weight: bold; font-size: 18px;">SIGNUP</button>
+								<button id="upload" style="display: none;" type="submit" name="SignUp1" value="Sign Up" class="btn btn-primary btn-lg btn-block" style="font-weight: bold; font-size: 18px;">SIGNUP</button>
+
+								<button id="upload2" style="display: none;" type="submit" name="SignUp2" value="Sign Up" class="btn btn-primary btn-lg btn-block" style="font-weight: bold; font-size: 18px;">SIGNUP</button>
 
 							</form>
 
