@@ -196,7 +196,7 @@
 								<div class="form-group">
 									<label class="control-label" style="margin-right: 370px;">Usertype</label>
 										<input type="radio" name="user_type" value="User P.I.C" class="detail" required=""> User P.I.C &nbsp; &nbsp; &nbsp;
-										<input type="radio" name="user_type" value="Manager P.I.C" class="detail" required=""> Manager P.I.C
+										<input type="radio" name="user_type" value="Manager P.I.C" class="detail" required=""> <span style="margin-right: 500px;"> Manager P.I.C </span>
 								</div>
 
 								<button id="upload" style="display: none;" type="submit" name="SignUp1" value="Sign Up" class="btn btn-primary btn-lg btn-block" style="font-weight: bold; font-size: 18px;">SIGNUP</button>
