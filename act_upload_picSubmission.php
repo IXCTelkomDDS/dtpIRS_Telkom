@@ -15,6 +15,7 @@
     //$max_size     = 5000000; //5 MB
 
       $username       = $_POST['USERNAME'];
+      $tgl_upload     = date("Y-m-d H:m:s");
       $judul          = $_POST['JUDUL_UPLOAD'];
       $jenis_file     = $_POST['JENIS_FILE_UPLOAD'];
       $jenis_lab      = $_POST['JENIS_LAB_UPLOAD'];
@@ -25,7 +26,7 @@
           $nama_file = $file_name;
             move_uploaded_file($file_tmp, 'uploads/'.$nama_file);
 
-            $sql = "INSERT INTO upload_dtp (ID_UPLOAD, USERNAME, TGL_UPLOAD, JUDUL_UPLOAD, JENIS_FILE_UPLOAD, JENIS_LAB_UPLOAD, DESKRIPSI_UPLOAD, NAMA_FILE_UPLOAD) VALUES (null, '$username', NOW(), '$judul', '$jenis_file', '$jenis_lab', '$deskripsi', '$nama_file')";
+            $sql = "INSERT INTO upload_dtp (ID_UPLOAD, USERNAME, TGL_UPLOAD, JUDUL_UPLOAD, JENIS_FILE_UPLOAD, JENIS_LAB_UPLOAD, DESKRIPSI_UPLOAD, NAMA_FILE_UPLOAD) VALUES (null, '$username', '$tgl_upload', '$judul', '$jenis_file', '$jenis_lab', '$deskripsi', '$nama_file')";
             $query = mysqli_query($connect,$sql);     
 
             if($query) { ?>
@@ -46,6 +47,7 @@
   else if(isset($_POST['Submit2'])) {
 
     $username       = $_POST['USERNAME'];
+    $tgl_upload     = date("Y-m-d H:m:s");
     $judul          = $_POST['JUDUL_UPLOAD'];
     $jenis_file     = $_POST['JENIS_FILE_UPLOAD'];
     $unggulan       = $_POST['UNGGULAN'];
@@ -54,7 +56,7 @@
     $url            = $_POST['URL'];
 
       if($url != '') {
-        $sql2 = "INSERT INTO upload_dtp (ID_UPLOAD, USERNAME, TGL_UPLOAD, JUDUL_UPLOAD, JENIS_FILE_UPLOAD, UNGGULAN, JENIS_LAB_UPLOAD, DESKRIPSI_UPLOAD, URL) VALUES (null, '$username', NOW(), '$judul', '$jenis_file', '$unggulan', '$jenis_lab', '$deskripsi', '$url')";
+        $sql2 = "INSERT INTO upload_dtp (ID_UPLOAD, USERNAME, TGL_UPLOAD, JUDUL_UPLOAD, JENIS_FILE_UPLOAD, UNGGULAN, JENIS_LAB_UPLOAD, DESKRIPSI_UPLOAD, URL) VALUES (null, '$username', '$tgl_upload', '$judul', '$jenis_file', '$unggulan', '$jenis_lab', '$deskripsi', '$url')";
         $query2 = mysqli_query($connect,$sql2);
 
             if($query2) { ?>
