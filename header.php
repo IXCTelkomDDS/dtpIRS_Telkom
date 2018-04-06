@@ -38,6 +38,6 @@
 		<link href="css/custom.css" rel="stylesheet">
 
 		<!-- Pop up css --> 
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 	</head>
