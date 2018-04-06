@@ -53,8 +53,7 @@
                 location.href='admin/update.php';
               </script>
             <?php } ?>
-    
-    <?php } ?>
+ 
   <?php } else {
     $sql = "UPDATE upload_dtp SET USERNAME = '$username', TGL_UPDATE = NOW(), JUDUL_UPLOAD = '$judul', JENIS_FILE_UPLOAD = '$jenis_file', JENIS_LAB_UPLOAD = '$jenis_lab', DESKRIPSI_UPLOAD = '$deskripsi' WHERE ID_UPLOAD = '$id_upload'";
     $query = mysqli_query($connect,$sql);     
@@ -71,7 +70,8 @@
               </script>
             <?php } ?>
 
-    ?>
+<?php } ?>
+
 <?php } ?>
 
 <?php }
@@ -125,8 +125,7 @@
                 location.href='admin/update.php';
               </script>
             <?php } ?>
-    
-    <?php } ?>
+
   <?php } else {
     $sql = "UPDATE upload_dtp SET USERNAME = '$username', TGL_UPDATE = NOW(), JUDUL_UPLOAD = '$judul', JENIS_FILE_UPLOAD = '$jenis_file', JENIS_LAB_UPLOAD = '$jenis_lab', DESKRIPSI_UPLOAD = '$deskripsi' WHERE ID_UPLOAD = '$id_upload'";
     $query = mysqli_query($connect,$sql);     
@@ -144,6 +143,8 @@
             <?php } ?>
 
  
+<?php } ?>
+
 <?php } ?>
 
 <?php }
