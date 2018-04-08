@@ -4,7 +4,7 @@
 
   include "koneksi_db.php";
 
-    if(isset($_POST['Submit_ka'])) {
+    if(isset($_POST['Submit1'])) {
 
     $allowed_ext  = array('pdf', ''); //untuk tipe file
     $file_name    = $_FILES['NAMA_FILE_UPLOAD']['name'];
@@ -39,7 +39,7 @@
           $nama_file = $file_name;
             move_uploaded_file($file_tmp, 'uploads/'.$nama_file);
 
-            $sql = "UPDATE upload_dtp SET USERNAME = '$username', TGL_UPDATE = '$tgl_update', JUDUL_UPLOAD = '$judul', JENIS_FILE_UPLOAD = '$jenis_file', JENIS_LAB_UPLOAD = '$jenis_lab', DESKRIPSI_UPLOAD = '$deskripsi', NAMA_FILE_UPLOAD = '$filebaru' WHERE ID_UPLOAD = '$id_upload'";
+            $sql = "UPDATE upload_dtp SET USERNAME = '$username', TGL_UPDATE = NOW(), JUDUL_UPLOAD = '$judul', JENIS_FILE_UPLOAD = '$jenis_file', JENIS_LAB_UPLOAD = '$jenis_lab', DESKRIPSI_UPLOAD = '$deskripsi', NAMA_FILE_UPLOAD = '$filebaru' WHERE ID_UPLOAD = '$id_upload'";
             $query = mysqli_query($connect,$sql);     
 
             if($query) { ?>
@@ -54,6 +54,7 @@
               </script>
             <?php } ?>
  
+ <?php } ?>
   <?php } else {
     $sql = "UPDATE upload_dtp SET USERNAME = '$username', TGL_UPDATE = NOW(), JUDUL_UPLOAD = '$judul', JENIS_FILE_UPLOAD = '$jenis_file', JENIS_LAB_UPLOAD = '$jenis_lab', DESKRIPSI_UPLOAD = '$deskripsi' WHERE ID_UPLOAD = '$id_upload'";
     $query = mysqli_query($connect,$sql);     
@@ -70,13 +71,13 @@
               </script>
             <?php } ?>
 
-<?php } ?>
+    ?>
 
 <?php } ?>
 
 <?php }
 
-  if(isset($_POST['Submit_sta'])) {
+  else if(isset($_POST['Submit2'])) {
 
     $allowed_ext  = array('pdf', ''); //untuk tipe file
     $file_name    = $_FILES['NAMA_FILE_UPLOAD']['name'];
@@ -111,10 +112,10 @@
           $nama_file = $file_name;
             move_uploaded_file($file_tmp, 'uploads/'.$nama_file);
 
-            $sql = "UPDATE upload_dtp SET USERNAME = '$username', TGL_UPDATE = '$tgl_update', JUDUL_UPLOAD = '$judul', JENIS_FILE_UPLOAD = '$jenis_file', JENIS_LAB_UPLOAD = '$jenis_lab', DESKRIPSI_UPLOAD = '$deskripsi', NAMA_FILE_UPLOAD = '$filebaru' WHERE ID_UPLOAD = '$id_upload'";
-            $query = mysqli_query($connect,$sql);     
+            $sql3 = "UPDATE upload_dtp SET USERNAME = '$username', TGL_UPDATE = NOW(), JUDUL_UPLOAD = '$judul', JENIS_FILE_UPLOAD = '$jenis_file', JENIS_LAB_UPLOAD = '$jenis_lab', DESKRIPSI_UPLOAD = '$deskripsi', NAMA_FILE_UPLOAD = '$filebaru' WHERE ID_UPLOAD = '$id_upload'";
+            $query3 = mysqli_query($connect,$sql3);     
 
-            if($query) { ?>
+            if($query3) { ?>
               <script>
                 alert('Update Successful');
                 location.href='admin/standardization.php';
@@ -125,12 +126,14 @@
                 location.href='admin/update.php';
               </script>
             <?php } ?>
+
+  <?php } ?>
 
   <?php } else {
-    $sql = "UPDATE upload_dtp SET USERNAME = '$username', TGL_UPDATE = NOW(), JUDUL_UPLOAD = '$judul', JENIS_FILE_UPLOAD = '$jenis_file', JENIS_LAB_UPLOAD = '$jenis_lab', DESKRIPSI_UPLOAD = '$deskripsi' WHERE ID_UPLOAD = '$id_upload'";
-    $query = mysqli_query($connect,$sql);     
+    $sql3 = "UPDATE upload_dtp SET USERNAME = '$username', TGL_UPDATE = NOW(), JUDUL_UPLOAD = '$judul', JENIS_FILE_UPLOAD = '$jenis_file', JENIS_LAB_UPLOAD = '$jenis_lab', DESKRIPSI_UPLOAD = '$deskripsi' WHERE ID_UPLOAD = '$id_upload'";
+    $query3 = mysqli_query($connect,$sql3);     
 
-            if($query) { ?>
+            if($query3) { ?>
               <script>
                 alert('Update Successful');
                 location.href='admin/standardization.php';
@@ -142,14 +145,12 @@
               </script>
             <?php } ?>
 
- 
-<?php } ?>
-
+ ?>
 <?php } ?>
 
 <?php }
 
-  else if(isset($_POST['Submit_pro'])) {
+  else if(isset($_POST['Submit3'])) {
 
     $id_upload      = $_POST['ID_UPLOAD'];
     $username       = $_POST['USERNAME'];
@@ -175,10 +176,10 @@
               </script>
             <?php } ?>    
 
-      <?php } else { ?>
-          <script>
-          alert('Update Failed');
-          location.href='admin/update.php';
-        </script>       
+<?php } else { ?>
+  <script>
+    alert('Update Failed');
+    location.href='admin/update.php';
+  </script>       
 
-    <?php } ?>
+<?php } ?>
