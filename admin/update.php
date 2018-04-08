@@ -132,13 +132,13 @@
 					<?php if ($data['JENIS_FILE_UPLOAD'] == 'Kajian') { ?>
 
 					<div style="padding-top: 10px; padding-bottom: 20px;" class="container-login100-form-btn m-t-17">
-						<button class="login100-form-btn" type="submit" value="Update File" name="Submit_ka" style="font-weight: bold; height: 40px;"> Update File </button>
+						<button class="login100-form-btn" type="submit" value="Update File" name="Submit1" style="font-weight: bold; height: 40px;"> Update File </button>
 					</div>
 
 					<?php } else if ($data['JENIS_FILE_UPLOAD'] == 'Dokumen Standar') { ?>
 
 					<div style="padding-top: 10px; padding-bottom: 20px;" class="container-login100-form-btn m-t-17">
-						<button class="login100-form-btn" type="submit" value="Update File" name="Submit_sta" style="font-weight: bold; height: 40px;"> Update File </button>
+						<button class="login100-form-btn" type="submit" value="Update File" name="Submit2" style="font-weight: bold; height: 40px;"> Update File </button>
 					</div>
 
 					<?php } ?>
@@ -146,7 +146,7 @@
 					<?php if ($data['JENIS_FILE_UPLOAD'] == 'Prototype') { ?>
 
 					<div style="padding-top: 10px; padding-bottom: 20px;" class="container-login100-form-btn m-t-17">
-						<button onclick = "Warn2();" class="login100-form-btn" type="submit" value="Update URL" name="Submit_pro" style="font-weight: bold; height: 40px;"> Update URL </button>
+						<button onclick = "Warn2();" class="login100-form-btn" type="submit" value="Update URL" name="Submit3" style="font-weight: bold; height: 40px;"> Update URL </button>
 					</div>
 
 					<?php } ?>
