@@ -2,7 +2,7 @@
 
 <?php
 
-  include "../koneksi_db.php";
+  include "koneksi_db.php";
 
     if(isset($_POST['Submit'])) {
 
