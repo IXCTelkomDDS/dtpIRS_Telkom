@@ -264,3 +264,17 @@
 <?php
 	include "../footer-pic.php";
 ?>
+
+<script>
+			
+	function Warn2() {
+        var URL=document.getElementById('url');
+					
+		if(URL.value=='') {
+			alert ("Please fill the URL");
+			return false;
+		}
+			return true;
+        }
+			
+</script>
