@@ -18,6 +18,7 @@
       //$tgl_upload     = date("Y-m-d H:m:s");
       $judul          = $_POST['JUDUL_UPLOAD'];
       $jenis_file     = $_POST['JENIS_FILE_UPLOAD'];
+      $unggulan       = $_POST['UNGGULAN'];
       $jenis_lab      = $_POST['JENIS_LAB_UPLOAD'];
       $deskripsi      = $_POST['DESKRIPSI_UPLOAD'];
       $nama_file      = $_POST['NAMA_FILE_UPLOAD'];
@@ -28,7 +29,7 @@
           $nama_file = $file_name;
             move_uploaded_file($file_tmp, 'uploads/'.$nama_file);
 
-            $sql = "INSERT INTO upload_dtp (ID_UPLOAD, USERNAME, TGL_UPLOAD, JUDUL_UPLOAD, JENIS_FILE_UPLOAD, JENIS_LAB_UPLOAD, DESKRIPSI_UPLOAD, NAMA_FILE_UPLOAD, URL) VALUES (null, '$username', NOW(), '$judul', '$jenis_file', '$jenis_lab', '$deskripsi', '$nama_file', '$url')";
+            $sql = "INSERT INTO upload_dtp (ID_UPLOAD, USERNAME, TGL_UPLOAD, JUDUL_UPLOAD, JENIS_FILE_UPLOAD, UNGGULAN, JENIS_LAB_UPLOAD, DESKRIPSI_UPLOAD, NAMA_FILE_UPLOAD, URL) VALUES (null, '$username', NOW(), '$judul', '$jenis_file', '$unggulan', '$jenis_lab', '$deskripsi', '$nama_file', '$url')";
             $query = mysqli_query($connect,$sql);     
 
             if($query) { ?>
