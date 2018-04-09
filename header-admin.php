@@ -101,16 +101,14 @@
 						</li>
 						
 						<li>
-							<a href="#subPages2" data-toggle="collapse"><i class="lnr lnr-file-empty"></i> <span>Log Activity Admin/span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
-							<div id="subPages2" class="collapse ">
+							<a href="#subPages3" data-toggle="collapse"><i class="lnr lnr-alarm"></i> <span>Log Activity Admin</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<div id="subPages3" class="collapse ">
 								<ul class="nav">
 									<li><a href="log_document.php" class="">Documents IRS</a></li>
 									<li><a href="log_user.php" class="">Users IRS</a></li>
 								</ul>
 							</div>
 						</li>
-
-						<li><a href="log-admin.php" class=""><i class="lnr lnr-alarm"></i> <span>Log Activity Admin</span></a></li>
 						
 					</ul>
 				</nav>
