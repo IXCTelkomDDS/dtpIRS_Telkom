@@ -14,12 +14,12 @@
 		//if search found
 		$keyword = $_REQUEST['keyword'];
 		$reload = "log_document.php?pagination=true&keyword=$keyword";
-		$sql = "SELECT lu.TGL_RUH, lu.KD_RUH, lu.COM_RUH, lu.USERNAME, up.user_type FROM log_upload_dtp lu JOIN user_pic up ON (lu.USERNAME = up.username) WHERE lu.TGL_RUH LIKE '%$keyword%' || lu.KD_RUH LIKE '%$keyword%' || lu.COM_RUH LIKE '%$keyword%' || lu.USERNAME LIKE '%$keyword%' || up.user_type LIKE '%$keyword%' ORDER BY KD_RUH ASC";
+		$sql = "SELECT lu.TGL_RUH, lu.KD_RUH, lu.COM_RUH, lu.USERNAME, up.user_type FROM log_upload_dtp lu JOIN user_pic up ON (lu.USERNAME = up.username) WHERE lu.TGL_RUH LIKE '%$keyword%' || lu.KD_RUH LIKE '%$keyword%' || lu.COM_RUH LIKE '%$keyword%' || lu.USERNAME LIKE '%$keyword%' || up.user_type LIKE '%$keyword%' ORDER BY TGL_RUH ASC";
 		$result = mysqli_query($connect, $sql);
 	} else {
 		//if search not found
 		$reload = "log_document.php?pagination=true";
-		$sql = "SELECT lu.TGL_RUH, lu.KD_RUH, lu.COM_RUH, lu.USERNAME, up.user_type FROM log_upload_dtp lu JOIN user_pic up ON (lu.USERNAME = up.username) ORDER BY KD_RUH ASC";
+		$sql = "SELECT lu.TGL_RUH, lu.KD_RUH, lu.COM_RUH, lu.USERNAME, up.user_type FROM log_upload_dtp lu JOIN user_pic up ON (lu.USERNAME = up.username) ORDER BY TGL_RUH ASC";
 		$result = mysqli_query($connect, $sql);
 	}
 
