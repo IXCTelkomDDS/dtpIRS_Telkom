@@ -43,7 +43,7 @@
 			<!-- MAIN CONTENT -->
 			<div class="main-content">
 				<div class="container-fluid">
-					<h3 class="page-title" style="font-weight: bold; font-size: 40px; margin-top: 10px;">Log Activity User P.I.C</h3>
+					<h3 class="page-title" style="font-weight: bold; font-size: 40px; margin-top: 10px;">Log Activity Users IRS</h3>
 
 						<!-- Search -->
 					<div class="col-lg-2 text-right">
