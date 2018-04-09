@@ -91,10 +91,10 @@
 										<tbody style="font-size: 16px;">
 											<tr>
 												<td><?php echo ++$no_urut;?></td>
-												<td><?php echo $data['TGL_RUH']?></td>
-												<td><?php echo $data['KD_RUH']?></td>
-												<td><?php echo $data['COM_RUH']?></td>
-												<td><?php echo $data['USERNAME']?></td>
+												<td><?php echo $data['tgl_ruh']?></td>
+												<td><?php echo $data['kd_ruh']?></td>
+												<td><?php echo $data['com_ruh']?></td>
+												<td><?php echo $data['name']?></td>
 												<td><?php echo $data['user_type']?></td>
 											</tr>
 										</tbody>
