@@ -144,7 +144,7 @@
 						<div class="col-sm-5">
 							<div class="media">
 								<div class="media-body text-left">
-									<h4 class="media-heading" style="margin-top: 30px; margin-left: 50px;">---- News of IRS ----</h4>
+									<h4 class="media-heading" style="margin-top: 30px; margin-left: 50px;">---- IRS News ----</h4>
 									<p><li style="margin-left: 40px;">Master Plan : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure aperiam consequatur quo quis exercitationem reprehenderit dolor vel ducimus, voluptate eaque suscipit iste placeat. </li></p>
 									<p><li style="margin-left: 40px;">Networking Planning : </li></p>
 									<p><li style="margin-left: 40px;">Consultation : </li></p>
