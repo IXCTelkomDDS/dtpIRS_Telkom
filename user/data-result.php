@@ -5,7 +5,7 @@
 session_start();
 
 
-	$sql_pic = "SELECT name_pic, phone, email FROM user_pic WHERE user_type = 'Manager P.I.C' GROUP BY name_pic";
+	$sql_pic = "SELECT name_pic, phone, email FROM user_pic WHERE user_type = 'Manager P.I.C'";
 	$result_pic = mysqli_query($connect, $sql_pic);
 
 
