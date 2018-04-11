@@ -24,7 +24,7 @@
 	}
 
 	//pagination config start
-	  $rpp = 5; //jml record per halaman
+	  $rpp = 10; //jml record per halaman
 	  $page = isset($_GET["page"]) ? (intval($_GET["page"])) : 1;
 	  $tcount = mysqli_num_rows($result);
 	  $tpages = ($tcount) ? ceil($tcount/$rpp) : 1; //total page, last page number
@@ -51,14 +51,14 @@
                     	<?php
 							if($_REQUEST['keyword']<>""){
                     	?>
-                        	<a class="btn btn-default" href="log-admin.php" style="height: 32px; border-color: transparent; font-weight: bold;">Reset Search</a>
+                        	<a class="btn btn-default" href="log_user.php" style="height: 32px; border-color: transparent; font-weight: bold;">Reset Search</a>
                     	<?php
                     		}
                     	?>
                 	</div>
 
                 	<div class= "nav navbar-nav navbar-right col-md-3">
-                    	<form method="post" action="log-admin.php">
+                    	<form method="post" action="log_user.php">
                         	<div class="form-group input-group">
                             	<input style="width: 200px; height: 30px;" type="text" name="keyword" class="form-control" placeholder="Search" value="<?php echo $_REQUEST['keyword'];?>">
                             	<span class="form-group input-group-btn">
