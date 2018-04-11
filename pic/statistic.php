@@ -185,3 +185,8 @@
 			</div>
 		</div>
 		<!-- section end -->		
+
+
+<?php
+	include "../footer-pic.php";
+?>

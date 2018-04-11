@@ -235,6 +235,14 @@
 		</div>
 		<!-- section end -->
 
+					
+
+		
+
+		<?php
+			include "../footer-pic.php";
+		?>
+
 
 <!-- pop up details -->
 <script type="text/javascript">
