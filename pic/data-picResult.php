@@ -84,12 +84,12 @@ session_start();
 				<div class="modal-body" style="height: 85px;">
 				    <!-- display data in pop up -->
 
-				    <?php if(($data['lab_pic'] == $data_pic['lab_pic'])) { ?>
+				    <?php //if(($data['lab_pic'] == $data_pic['lab_pic'])) { ?>
 
 				    <p>Name : <?php echo $data_pic['name_pic'];?></p>
 				    <p>Phone : <?php echo $data_pic['phone'];?> &amp; Email : <?php echo $data_pic['email'];?></p>	
 
-				    <?php } ?>
+				    <?php //} ?>
 
 		        </div>
 
