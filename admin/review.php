@@ -148,9 +148,8 @@
 
 										    <?php if($data_pic['lab_pic'] == $data['lab_pic']) { ?>
 
-										    <p>Nama     : <?php echo $data_pic['name_pic'];?></p>
-										    <p>No. Telp : <?php echo $data_pic['phone'];?></p>
-										    <p>Email    : <?php echo $data_pic['email'];?></p>	
+										    <p>Name : <?php echo $data_pic['name_pic'];?></p>
+				    						<p>Phone : <?php echo $data_pic['phone'];?> &amp; Email : <?php echo $data_pic['email'];?></p>	
 
 										    <?php } ?>
 
