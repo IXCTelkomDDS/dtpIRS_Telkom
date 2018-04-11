@@ -1,7 +1,3 @@
-<!-- Garis -->
-<hr class="onepixel">
-<!-- End Garis -->
-
 
 <!-- footer start -->
 		<!-- ================ -->
