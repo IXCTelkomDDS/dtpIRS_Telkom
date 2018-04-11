@@ -23,6 +23,9 @@
 		$result = mysqli_query($connect, $sql);
 	}
 
+	$sql_pic = "SELECT name_pic, phone, email FROM user_pic WHERE user_type = 'Manager P.I.C'";
+	$result_pic = mysqli_query($connect, $sql_pic);
+
 	//pagination config start
 	  $rpp = 5; //jml record per halaman
 	  $page = isset($_GET["page"]) ? (intval($_GET["page"])) : 1;
@@ -141,14 +144,13 @@
 								        <?php while($data_pic = mysqli_fetch_array($result_pic)) { //data di extract menggunakan "fetch array", kemudian ditampung di result menjadi data, setelah itu ditampilkan di tabel// ?>
 
 								        
-										<div class="modal-body">
+										<div class="modal-body" style="height: 85px;">
 										    <!-- display data in pop up -->
 
-										    <?php if($data_pic['lab_pic'] == $data['LAB_MANAGER']) { ?>
+										    <?php if($data_pic['lab_pic'] == $data['lab_pic']) { ?>
 
-										    <p>Nama     : <?php echo $data_pic['name_pic'];?></p>
-										    <p>No. Telp : <?php echo $data_pic['phone'];?></p>
-										    <p>Email    : <?php echo $data_pic['email'];?></p>	
+										    <p>Name : <?php echo $data_pic['name_pic'];?></p>
+				    						<p>Phone : <?php echo $data_pic['phone'];?> &amp; Email : <?php echo $data_pic['email'];?></p>	
 
 										    <?php } ?>
 
