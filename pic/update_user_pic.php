@@ -100,7 +100,6 @@
 												<li><a href="research-result.php" style="font-weight: bold;">Research Result</a></li>
 												<li class="active"><a href="" style="font-weight: bold;">Edit User</a></li>
 												<li><a href="prototype.php" style="font-weight: bold;;">Prototype</a></li>
-												<li><a href="#contact" style="font-weight: bold;">Contact Us</a></li>
 											</ul>
 
 											<ul class="nav navbar-nav navbar-right">

@@ -260,11 +260,6 @@
 </div>
 		<!-- section end -->		
 
-
-<?php
-	include "../footer-pic.php";
-?>
-
 <script>
 			
 	function Warn2() {
