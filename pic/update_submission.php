@@ -226,12 +226,3 @@
 <?php
 	include "../footer-pic.php";
 ?>
-
-
-<style type="text/css">
-	/*$(':radio,:checkbox').click(function(){
-	    return false;
-	});*/
-
-	$(':radio[readonly]:not(:checked)').attr('disabled', true);
-</style>
