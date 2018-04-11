@@ -143,7 +143,7 @@
 								        <?php while($data_pic = mysqli_fetch_array($result_pic)) { //data di extract menggunakan "fetch array", kemudian ditampung di result menjadi data, setelah itu ditampilkan di tabel// ?>
 
 								        
-										<div class="modal-body">
+										<div class="modal-body" style="height: 85px;">
 										    <!-- display data in pop up -->
 
 										    <?php if($data_pic['lab_pic'] == $data['lab_pic']) { ?>
