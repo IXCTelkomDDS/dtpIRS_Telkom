@@ -39,7 +39,7 @@
           $nama_file = $file_name;
             move_uploaded_file($file_tmp, 'uploads/'.$nama_file);
 
-            $sql = "UPDATE upload_dtp SET USERNAME = '$username', TGL_UPDATE = NOW(), JUDUL_UPLOAD = '$judul', JENIS_FILE_UPLOAD = '$jenis_file', JENIS_LAB_UPLOAD = '$jenis_lab', DESKRIPSI_UPLOAD = '$deskripsi', NAMA_FILE_UPLOAD = '$filebaru' WHERE ID_UPLOAD = '$id_upload'";
+            $sql = "UPDATE upload_dtp SET USERNAME = '$username', JUDUL_UPLOAD = '$judul', JENIS_FILE_UPLOAD = '$jenis_file', JENIS_LAB_UPLOAD = '$jenis_lab', DESKRIPSI_UPLOAD = '$deskripsi', NAMA_FILE_UPLOAD = '$filebaru' WHERE ID_UPLOAD = '$id_upload'";
             $query = mysqli_query($connect,$sql);     
 
             if($query) { ?>
@@ -56,7 +56,7 @@
     
     <?php } ?>
   <?php } else {
-    $sql2 = "UPDATE upload_dtp SET USERNAME = '$username', TGL_UPDATE = NOW(), JUDUL_UPLOAD = '$judul', JENIS_FILE_UPLOAD = '$jenis_file', JENIS_LAB_UPLOAD = '$jenis_lab', DESKRIPSI_UPLOAD = '$deskripsi' WHERE ID_UPLOAD = '$id_upload'";
+    $sql2 = "UPDATE upload_dtp SET USERNAME = '$username', JUDUL_UPLOAD = '$judul', JENIS_FILE_UPLOAD = '$jenis_file', JENIS_LAB_UPLOAD = '$jenis_lab', DESKRIPSI_UPLOAD = '$deskripsi' WHERE ID_UPLOAD = '$id_upload'";
     $query2 = mysqli_query($connect,$sql2);     
 
             if($query2) { ?>
@@ -87,7 +87,7 @@
     $deskripsi      = $_POST['DESKRIPSI_UPLOAD'];
     $url            = $_POST['URL'];
 
-        $sql3 = "UPDATE upload_dtp SET USERNAME = '$username', TGL_UPDATE = NOW(), JUDUL_UPLOAD = '$judul', JENIS_FILE_UPLOAD = '$jenis_file', UNGGULAN = '$unggulan', JENIS_LAB_UPLOAD = '$jenis_lab', DESKRIPSI_UPLOAD = '$deskripsi', URL = '$url' WHERE ID_UPLOAD = '$id_upload'";
+        $sql3 = "UPDATE upload_dtp SET USERNAME = '$username', JUDUL_UPLOAD = '$judul', JENIS_FILE_UPLOAD = '$jenis_file', UNGGULAN = '$unggulan', JENIS_LAB_UPLOAD = '$jenis_lab', DESKRIPSI_UPLOAD = '$deskripsi', URL = '$url' WHERE ID_UPLOAD = '$id_upload'";
         $query3 = mysqli_query($connect,$sql3);
 
             if($query3) { ?>
