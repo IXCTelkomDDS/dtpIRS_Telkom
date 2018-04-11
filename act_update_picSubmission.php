@@ -56,10 +56,10 @@
     
     <?php } ?>
   <?php } else {
-    $sql = "UPDATE upload_dtp SET USERNAME = '$username', TGL_UPDATE = NOW(), JUDUL_UPLOAD = '$judul', JENIS_FILE_UPLOAD = '$jenis_file', JENIS_LAB_UPLOAD = '$jenis_lab', DESKRIPSI_UPLOAD = '$deskripsi' WHERE ID_UPLOAD = '$id_upload'";
-    $query = mysqli_query($connect,$sql);     
+    $sql2 = "UPDATE upload_dtp SET USERNAME = '$username', TGL_UPDATE = NOW(), JUDUL_UPLOAD = '$judul', JENIS_FILE_UPLOAD = '$jenis_file', JENIS_LAB_UPLOAD = '$jenis_lab', DESKRIPSI_UPLOAD = '$deskripsi' WHERE ID_UPLOAD = '$id_upload'";
+    $query2 = mysqli_query($connect,$sql2);     
 
-            if($query) { ?>
+            if($query2) { ?>
               <script>
                 alert('Update Successful');
                 location.href='pic/research-result.php';
@@ -87,10 +87,10 @@
     $deskripsi      = $_POST['DESKRIPSI_UPLOAD'];
     $url            = $_POST['URL'];
 
-        $sql2 = "UPDATE upload_dtp SET USERNAME = '$username', TGL_UPDATE = NOW(), JUDUL_UPLOAD = '$judul', JENIS_FILE_UPLOAD = '$jenis_file', UNGGULAN = '$unggulan', JENIS_LAB_UPLOAD = '$jenis_lab', DESKRIPSI_UPLOAD = '$deskripsi', URL = '$url' WHERE ID_UPLOAD = '$id_upload'";
-        $query2 = mysqli_query($connect,$sql2);
+        $sql3 = "UPDATE upload_dtp SET USERNAME = '$username', TGL_UPDATE = NOW(), JUDUL_UPLOAD = '$judul', JENIS_FILE_UPLOAD = '$jenis_file', UNGGULAN = '$unggulan', JENIS_LAB_UPLOAD = '$jenis_lab', DESKRIPSI_UPLOAD = '$deskripsi', URL = '$url' WHERE ID_UPLOAD = '$id_upload'";
+        $query3 = mysqli_query($connect,$sql3);
 
-            if($query2) { ?>
+            if($query3) { ?>
                 <script>
                 alert('Update Successful');
                 location.href='pic/prototype.php';
