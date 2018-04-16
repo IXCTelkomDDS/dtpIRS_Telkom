@@ -163,7 +163,7 @@
 				      <!--- Bagian Judul--> 
 				  <div class="col-md-8" style="margin-left: 200px;">
 				    <div class="panel panel-primary">
-				      <div class="panel-heading">Count Statistic of Lab IRS</div>
+				      <div class="panel-heading">Count Statistic of IRS Area</div>
 				        <div class="panel-body">
 				          <div id ="mygraph"></div>
 				        </div>
@@ -184,7 +184,7 @@
 				        },
 				        
 				        xAxis: {
-				            categories: ['LAB IRS']
+				            categories: ['IRS Area']
 				        },
 				        
 				        yAxis: {
