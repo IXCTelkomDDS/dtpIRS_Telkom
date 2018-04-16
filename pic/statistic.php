@@ -63,7 +63,7 @@
 											<ul class="nav navbar-nav navbar-left">
 												<li><a href="index.php" style="font-weight: bold;">Home</a></li>
 												<li><a href="research-result.php" style="font-weight: bold;">Research Result</a></li>
-												<li><a href="#chart" style="font-weight: bold;">Statistics Lab IRS</a></li>
+												<li><a href="#chart" style="font-weight: bold;">Statistics IRS Area</a></li>
 												<li><a href="prototype.php" style="font-weight: bold;">Prototype</a></li>
 											</ul>
 
@@ -114,7 +114,7 @@
 				      <!--- Bagian Judul--> 
 				  <div class="col-md-8" style="margin-left: 200px;">
 				    <div class="panel panel-primary">
-				      <div class="panel-heading">Count Statistic of Lab IRS</div>
+				      <div class="panel-heading">Count Statistic of IRS Area</div>
 				        <div class="panel-body">
 				          <div id ="mygraph"></div>
 				        </div>
@@ -135,7 +135,7 @@
 				        },
 				        
 				        xAxis: {
-				            categories: ['LAB IRS']
+				            categories: ['IRS Area']
 				        },
 				        
 				        yAxis: {
