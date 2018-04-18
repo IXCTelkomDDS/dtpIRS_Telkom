@@ -239,7 +239,7 @@
 							<div class="col-sm-6 col-md-3 isotope-item web-design">
 								<div class="image-box">
 									<div class="overlay-container">
-										<img src="images/BAN3.jpg" alt="">
+										<img src="images/BAN.jpg" alt="">
 										<a class="overlay" data-toggle="modal" data-target="#project-1">
 											<i class="fa fa-search-plus"></i>
 											<span style="font-weight: bold;">Broadband Access Network Research (BAN)</span>
@@ -331,7 +331,7 @@
 							<div class="col-sm-6 col-md-3 isotope-item web-design">
 								<div class="image-box">
 									<div class="overlay-container">
-										<img src="images/CNP.jpg" alt="">
+										<img src="images/CNP.jpeg" alt="">
 										<a class="overlay" data-toggle="modal" data-target="#project-3">
 											<i class="fa fa-search-plus"></i>
 											<span style="font-weight: bold;">Cloud and Node Platform Research (CNP)</span>
@@ -516,7 +516,7 @@
 							<div class="col-sm-6 col-md-3 isotope-item site-building">
 								<div class="image-box">
 									<div class="overlay-container">
-										<img src="images/SOB.jpg" alt="">
+										<img src="images/SOB.jpeg" alt="">
 										<a class="overlay" data-toggle="modal" data-target="#project-7">
 											<i class="fa fa-search-plus"></i>
 											<span style="font-weight: bold;">Security, OSS and BSS Research (SOB)</span>
