@@ -24,7 +24,7 @@
 	}
 
 	//pagination config start
-	  $rpp = 10; //jml record per halaman
+	  $rpp = 5; //jml record per halaman
 	  $page = isset($_GET["page"]) ? (intval($_GET["page"])) : 1;
 	  $tcount = mysqli_num_rows($result);
 	  $tpages = ($tcount) ? ceil($tcount/$rpp) : 1; //total page, last page number
@@ -86,7 +86,9 @@
 											</tr>
 										</thead>
 
-							<?php while($data = mysqli_fetch_array($result)) { ?>
+							<?php while(($count<$rpp) && ($i<$tcount)){
+							  mysqli_data_seek($result,$i);
+							  $data = mysqli_fetch_array($result); ?>
 
 										<tbody style="font-size: 16px;">
 											<tr>
@@ -99,7 +101,11 @@
 											</tr>
 										</tbody>
 
-							<?php } ?>
+							<?php 
+								$i++;
+								$count++;
+						    	}
+							?>
 
 									</table>
 
