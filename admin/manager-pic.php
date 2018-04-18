@@ -6,11 +6,22 @@
 
 	include "../header-admin.php";
 	include "../koneksi_db.php";
+	include "../pagination1.php";
 	include "../check_session_admin.php";
 
-	$no = 1;
+	$reload = "manager-pic.php?pagination=true";
 	$sql = "SELECT * FROM user_pic WHERE user_type = 'Manager P.I.C' ORDER BY id_pic ASC";
 	$result = mysqli_query($connect, $sql);
+
+	//pagination config start
+	  $rpp = 5; //jml record per halaman
+	  $page = isset($_GET["page"]) ? (intval($_GET["page"])) : 1;
+	  $tcount = mysqli_num_rows($result);
+	  $tpages = ($tcount) ? ceil($tcount/$rpp) : 1; //total page, last page number
+	  $count = 0;
+	  $i = ($page-1)*$rpp;
+	  $no_urut = ($page-1)*$rpp;
+	  //pagination config end
 
 ?>
 
@@ -51,11 +62,13 @@
 											</tr>
 										</thead>
 
-							<?php while($data = mysqli_fetch_array($result)) { ?>
+							<?php while(($count<$rpp) && ($i<$tcount)){
+							  mysqli_data_seek($result,$i);
+							  $data = mysqli_fetch_array($result); ?>
 
 										<tbody style="font-size: 16px;">
 											<tr>
-												<td><?php echo $no++;?></td>
+												<td><?php echo ++$no_urut;?></td>
 												<td><?php echo $data['username']?></td>
 												<td><?php echo $data['name_pic']?></td>
 												<td><?php echo $data['phone']?></td>
@@ -65,16 +78,19 @@
 								      					&nbsp;
 								      				<a class="btn btn-primary" onclick="return konfirmasi();" href="act_delete_user.php?id=<?php echo $data['id_pic'];?>" style="font-weight: bold;">Delete</a>
 								    			</td>
-
-					    	<!-- End Action-->
-
-
 											</tr>
 										</tbody>
 
-							<?php } ?>
+							<?php 
+								$i++;
+								$count++;
+						    	}
+							?>
 
 									</table>
+
+									<div align="center"><?php echo paginate_one($reload, $page, $tpages);?></div>
+
 								</div>
 							</div>
 							<!-- END BORDERED TABLE -->
