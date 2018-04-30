@@ -184,7 +184,7 @@
 							</div>				
 						</div>
 
-						<div align="center" style="margin-left: 500px;"><?php echo paginate_one($reload, $page, $tpages);?></div>
+						<div align="center" style="margin-left: 800px;"><?php echo paginate_one($reload, $page, $tpages);?></div>
 
                 	</div>
                 	<!-- End Search -->
