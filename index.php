@@ -13,7 +13,7 @@
 	$result = mysqli_query($connect, $sql);
 
 	//pagination config start
-	  $rpp = 4; //jml record per halaman
+	  $rpp = 5; //jml record per halaman
 	  $page = isset($_GET["page"]) ? (intval($_GET["page"])) : 1;
 	  $tcount = mysqli_num_rows($result);
 	  $tpages = ($tcount) ? ceil($tcount/$rpp) : 1; //total page, last page number
@@ -170,8 +170,6 @@
 									?>
 
 									<p style="margin-left: 40px;"><?php echo ++$no_urut;?>. &nbsp; <?php echo '<a target="_blank" style="font-weight: bold;" href = " '.$data['link'].'">'.$data['judul_news'].'</a>';?>
-										<br>
-										Read more... <?php echo '<a target="_blank" style="font-weight: bold;" href = " '.$data['link'].'">'.$data['link'].'</a>';?>
 									</p>
 
 									<?php 
