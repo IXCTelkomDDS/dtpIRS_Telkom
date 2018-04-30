@@ -170,8 +170,8 @@
 									?>
 
 									<p style="margin-left: 40px;"><?php echo ++$no_urut;?>. &nbsp; <?php echo $data['judul_news'];?>
-										<br>
-										Read more... <?php echo '<a target="_blank" style="font-weight: bold;" href = " '.$data['link'].'">'.$data['link'].'<a>';?>
+									</p>
+									<p style="margin-left: 40px;"><?php echo '<a target="_blank" style="font-weight: bold;" href = " '.$data['link'].'">'.$data['link'].'<a>';?>
 									</p>
 
 									<?php 
