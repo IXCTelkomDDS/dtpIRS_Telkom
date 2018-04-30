@@ -159,15 +159,16 @@
 								<div class="media-body text-left">
 									<h4 class="media-heading" style="margin-top: 30px; margin-left: 50px;">---- IRS News ----</h4>
 
-									<?php //while(($count<$rpp) && ($i<$tcount)){
-									  //mysqli_data_seek($result,$i);
-									  //$data = mysqli_fetch_array($result);
+									<?php while(($count<$rpp) && ($i<$tcount)){
+									  mysqli_data_seek($result,$i);
+									  $data = mysqli_fetch_array($result);
 
-									  while($data = mysqli_fetch_array($result)) {
+									  //while($data = mysqli_fetch_array($result)) {
 
 									?>
-									
-									<p><li style="margin-left: 40px;">Title : <?php echo $data['judul_news'];?></li></p>
+
+									<p><li style="margin-left: 40px;"><?php echo $data['judul_news'];?></li></p>
+									<p><li style="margin-left: 40px;">Read more... <?php echo $data['link'];?></li></p>
 
 									<?php } ?>
 
