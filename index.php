@@ -169,10 +169,10 @@
 
 									?>
 
-									<p style="margin-left: 40px;"><?php echo ++$no_urut;?>. &nbsp; <?php echo $data['judul_news'];?>
+									<td style="margin-left: 40px;"><?php echo ++$no_urut;?>. &nbsp; <?php echo $data['judul_news'];?>
 										<br>
-										<td>Read more... <?php echo '<a target="_blank" style="font-weight: bold;" href = " '.$data['link'].'">'.$data['link'].'<a>';?></td>
-									</p>
+										Read more... <?php echo '<a target="_blank" style="font-weight: bold;" href = " '.$data['link'].'">'.$data['link'].'<a>';?>
+									</td>
 
 									<?php 
 										$i++;
