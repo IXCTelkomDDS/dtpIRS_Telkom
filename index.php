@@ -156,7 +156,7 @@
 	                    </form>
 	                </div>
 
-						<div class="col-sm-6">
+						<div class="col-sm-5">
 							<div class="media">
 								<div class="media-body text-left">
 									<h4 class="media-heading" style="margin-top: 30px; margin-left: 50px; margin-bottom: 20px;">---- IRS News ----</h4>
