@@ -172,11 +172,17 @@
 										Read more... <?php echo $data['link'];?>
 									</li>
 
-									<?php } ?>
+									<?php 
+										$i++;
+										$count++;
+							    		}
+									?>
 
 								</div>
 							</div>				
 						</div>
+
+						<div align="center"><?php echo paginate_one($reload, $page, $tpages);?></div>
 
                 	</div>
                 	<!-- End Search -->
