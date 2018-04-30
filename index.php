@@ -13,7 +13,7 @@
 	$result = mysqli_query($connect, $sql);
 
 	//pagination config start
-	  $rpp = 5; //jml record per halaman
+	  $rpp = 10; //jml record per halaman
 	  $page = isset($_GET["page"]) ? (intval($_GET["page"])) : 1;
 	  $tcount = mysqli_num_rows($result);
 	  $tpages = ($tcount) ? ceil($tcount/$rpp) : 1; //total page, last page number
@@ -137,7 +137,7 @@
 					<br>
 
 					<!-- Search -->
-						<div class="col-sm-6">
+						<div class="col-sm-7">
 							<div class="media">
 								<div class="media-body text-left">
 									<img src="images/home.jpg" width="800" style="height: 500px;" alt="">
@@ -156,7 +156,7 @@
 	                    </form>
 	                </div>
 
-						<div class="col-sm-6">
+						<div class="col-sm-5">
 							<div class="media">
 								<div class="media-body text-left">
 									<h4 class="media-heading" style="margin-top: 30px; margin-left: 50px; margin-bottom: 20px;">---- IRS News ----</h4>
