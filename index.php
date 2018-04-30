@@ -137,7 +137,7 @@
 					<br>
 
 					<!-- Search -->
-						<div class="col-sm-7">
+						<div class="col-sm-5">
 							<div class="media">
 								<div class="media-body text-left">
 									<img src="images/home.jpg" width="800" style="height: 450px;" alt="">
@@ -156,7 +156,7 @@
 	                    </form>
 	                </div>
 
-						<div class="col-sm-8">
+						<div class="col-sm-7">
 							<div class="media">
 								<div class="media-body text-left">
 									<h4 class="media-heading" style="margin-top: 30px; margin-left: 50px; margin-bottom: 20px;">---- IRS News ----</h4>
