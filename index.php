@@ -7,7 +7,7 @@
 	include "koneksi_db.php";
 	include "header.php";
 
-	$sql = "SELECT * FROM news";
+	$sql = "SELECT * FROM news ORDER BY tgl_news ASC";
 	$result = mysqli_query($connect, $sql);
 
 	//pagination config start
@@ -159,9 +159,9 @@
 								<div class="media-body text-left">
 									<h4 class="media-heading" style="margin-top: 30px; margin-left: 50px;">---- IRS News ----</h4>
 
-									<?php while(($count<$rpp) && ($i<$tcount)){
-									  mysqli_data_seek($result,$i);
-									  $data = mysqli_fetch_array($result);
+									<?php //while(($count<$rpp) && ($i<$tcount)){
+									  //mysqli_data_seek($result,$i);
+									  //$data = mysqli_fetch_array($result);
 
 									  //while($data = mysqli_fetch_array($result)) {
 
