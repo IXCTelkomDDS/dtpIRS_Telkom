@@ -7,6 +7,19 @@
 	include "koneksi_db.php";
 	include "header.php";
 
+	$sql = "SELECT * FROM news";
+	$result = mysql_query($connect, $sql);
+
+	//pagination config start
+	  $rpp = 5; //jml record per halaman
+	  $page = isset($_GET["page"]) ? (intval($_GET["page"])) : 1;
+	  $tcount = mysqli_num_rows($result);
+	  $tpages = ($tcount) ? ceil($tcount/$rpp) : 1; //total page, last page number
+	  $count = 0;
+	  $i = ($page-1)*$rpp;
+	  $no_urut = ($page-1)*$rpp;
+	  //pagination config end
+
 ?>
 
 	<script src="js/jquery.js"></script>
@@ -144,15 +157,16 @@
 						<div class="col-sm-5">
 							<div class="media">
 								<div class="media-body text-left">
+
+									<?php while(($count<$rpp) && ($i<$tcount)){
+									  mysqli_data_seek($result,$i);
+									  $data = mysqli_fetch_array($result);?>
+
 									<h4 class="media-heading" style="margin-top: 30px; margin-left: 50px;">---- IRS News ----</h4>
-									<p><li style="margin-left: 40px;">Master Plan : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure aperiam consequatur quo quis exercitationem reprehenderit dolor vel ducimus, voluptate eaque suscipit iste placeat. </li></p>
-									<p><li style="margin-left: 40px;">Networking Planning : </li></p>
-									<p><li style="margin-left: 40px;">Consultation : </li></p>
-									<p><li style="margin-left: 40px;">Assessment Network : </li></p>
-									<p><li style="margin-left: 40px;">Assessment Security : </li></p>
-									<p><li style="margin-left: 40px;">Operational Problem Analysis : </li></p>
-									<p><li style="margin-left: 40px;">Technical Support : </li></p>
-									<p><li style="margin-left: 40px;">Testing/PoC : </li></p>
+									<p><li style="margin-left: 40px;">Title : <?php echo $data['judul_news'];?></li></p>
+
+									<?php } ?>
+
 								</div>
 							</div>				
 						</div>
