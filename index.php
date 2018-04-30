@@ -13,7 +13,7 @@
 	$result = mysqli_query($connect, $sql);
 
 	//pagination config start
-	  $rpp = 10; //jml record per halaman
+	  $rpp = 8; //jml record per halaman
 	  $page = isset($_GET["page"]) ? (intval($_GET["page"])) : 1;
 	  $tcount = mysqli_num_rows($result);
 	  $tpages = ($tcount) ? ceil($tcount/$rpp) : 1; //total page, last page number
