@@ -140,7 +140,7 @@
 						<div class="col-sm-6">
 							<div class="media">
 								<div class="media-body text-left">
-									<img src="images/home.jpg" width="800" style="height: 450px;" alt="">
+									<img src="images/home.jpg" width="800" style="height: 500px;" alt="">
 								</div>
 							</div>
 						</div>
@@ -184,7 +184,7 @@
 							</div>				
 						</div>
 
-						<div align="center" style="margin-left: 700px;"><?php echo paginate_one($reload, $page, $tpages);?></div>
+						<div align="center" style="margin-left: 600px;"><?php echo paginate_one($reload, $page, $tpages);?></div>
 
                 	</div>
                 	<!-- End Search -->
