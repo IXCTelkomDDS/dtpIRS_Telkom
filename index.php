@@ -137,7 +137,7 @@
 					<br>
 
 					<!-- Search -->
-						<div class="col-sm-6">
+						<div class="col-sm-7">
 							<div class="media">
 								<div class="media-body text-left">
 									<img src="images/home.jpg" width="800" style="height: 450px;" alt="">
@@ -169,7 +169,7 @@
 
 									?>
 
-									<p style="margin-left: 30px;"><?php echo ++$no_urut;?>. &nbsp; <?php echo '<a target="_blank" style="font-weight: bold;" href = " '.$data['link'].'">'.$data['judul_news'].'</a>';?>
+									<p style="margin-left: 20px;"><?php echo ++$no_urut;?>. &nbsp; <?php echo '<a target="_blank" style="font-weight: bold;" href = " '.$data['link'].'">'.$data['judul_news'].'</a>';?>
 									</p>
 
 									<?php 
