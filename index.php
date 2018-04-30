@@ -163,7 +163,7 @@
 									  //mysqli_data_seek($result,$i);
 									  //$data = mysqli_fetch_array($result);
 
-									  //while($data = mysqli_fetch_array($result)) {
+									  while($data = mysqli_fetch_array($result)) {
 
 									?>
 
