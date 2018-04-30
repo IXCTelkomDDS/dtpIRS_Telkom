@@ -8,7 +8,7 @@
 	include "header.php";
 
 	$sql = "SELECT * FROM news";
-	$result = mysql_query($connect, $sql);
+	$result = mysqli_query($connect, $sql);
 
 	//pagination config start
 	  $rpp = 5; //jml record per halaman
@@ -157,12 +157,16 @@
 						<div class="col-sm-5">
 							<div class="media">
 								<div class="media-body text-left">
-
-									<?php while(($count<$rpp) && ($i<$tcount)){
-									  mysqli_data_seek($result,$i);
-									  $data = mysqli_fetch_array($result);?>
-
 									<h4 class="media-heading" style="margin-top: 30px; margin-left: 50px;">---- IRS News ----</h4>
+
+									<?php //while(($count<$rpp) && ($i<$tcount)){
+									  //mysqli_data_seek($result,$i);
+									  //$data = mysqli_fetch_array($result);
+
+									  while($data = mysqli_fetch_array($result)) {
+
+									?>
+									
 									<p><li style="margin-left: 40px;">Title : <?php echo $data['judul_news'];?></li></p>
 
 									<?php } ?>
