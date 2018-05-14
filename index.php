@@ -9,7 +9,7 @@
 	include "pagination1.php";
 
 	$reload = "index.php?pagination=true";
-	$sql = "SELECT * FROM news ORDER BY tgl_news DESC";
+	$sql = "SELECT * FROM news ORDER BY tgl_news ASC";
 	$result = mysqli_query($connect, $sql);
 
 	//pagination config start
